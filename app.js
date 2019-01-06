@@ -7,15 +7,22 @@ const cameraView = document.querySelector("#camera--view"),
     cameraTrigger = document.querySelector("#camera--trigger")
 // Access the device camera and stream to cameraView
 function cameraStart() {
-    navigator.mediaDevices
-        .getUserMedia(constraints)
-        .then(function(stream) {
-        track = stream.getTracks()[0];
-        cameraView.srcObject = stream;
-    })
-    .catch(function(error) {
-        console.error("Oops. Something is broken.", error);
-    });
+     navigator.mediaDevices
+         .getUserMedia(constraints)
+         .then(function(stream) {
+         //track = stream.getTracks()[0];
+         cameraView.srcObject = stream;
+     })
+     .catch(function(error) {
+      console.error("Oops. Something is broken.", error);
+     });
+    
+	
+	// navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
+                    // //video.src = window.URL.createObjectURL(stream);
+                    // cameraView.srcObject = stream;
+                    // cameraView.play();
+                // });
 }
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
