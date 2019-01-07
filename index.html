@@ -9,7 +9,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p>A test</p>
+
+ <main id="camera">
+        <!-- Camera sensor -->
+        <canvas id="camera--sensor"></canvas>
+        <!-- Camera view -->
+        <video id="camera--view" autoplay playsinline></video>
+        <!-- Camera output -->
+        <img src="//:0" alt="" id="camera--output">
+        <!-- Camera trigger -->
+        <button id="camera--trigger">Take a picture</button>
+		
+		<input type="file" accept="image/*" capture="camera">
+    </main>
     <!-- Camera -->
    <input type='file' id="imgInp"  accept="image/*" capture="camera" />
     <img id="blah" src="#" alt="your image" width="100px" />
