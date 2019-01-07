@@ -7,16 +7,17 @@
     <title>Camera App</title>
     <!-- Link to your main style sheet-->
     <link rel="stylesheet" href="style.css">
+	
 </head>
 <body>
 
  <main id="camera">
         <!-- Camera sensor -->
-        <canvas id="camera--sensor"></canvas>
+        <canvas id="camera--sensor" width="270" height="350"></canvas>
         <!-- Camera view -->
-        <video id="camera--view" autoplay playsinline></video>
+        <video style="width:270px;height:350px;" id="camera--view" autoplay playsinline></video>
         <!-- Camera output -->
-        <img src="//:0" alt="" id="camera--output">
+        <!-- <img src="//:0" alt="" id="camera--output"> -->
         <!-- Camera trigger -->
         <button id="camera--trigger">Take a picture</button>
 		
