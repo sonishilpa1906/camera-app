@@ -5,10 +5,10 @@ html, body{
   width: 100%;
 }
 #camera, #camera--view, #camera--sensor, #camera--output{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    /* position: fixed; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* object-fit: cover; */
 }
 #camera--view, #camera--sensor, #camera--output{
     transform: scaleX(-1);
@@ -39,10 +39,3 @@ html, body{
     z-index: 2;
 }
 
-#camera--view
-{
-	width: 300px !important;
-    height: 300px !important;
-    margin-top: 150px !important;
-	
-}
