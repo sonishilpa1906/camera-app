@@ -7,6 +7,7 @@ const cameraView = document.querySelector("#camera--view"),
     cameraTrigger = document.querySelector("#camera--trigger")
 // Access the device camera and stream to cameraView
 function cameraStart() {
+	
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
@@ -14,7 +15,10 @@ function cameraStart() {
         cameraView.srcObject = stream;
     })
     .catch(function(error) {
-        console.error("Oops. Something is broken.", error);
+        //console.error("Oops. Something is broken.", error);
+		$("#camera").hide();
+		$("#imgInp").show();
+		$("#blah").show();
     });
 }
 // Take a picture when cameraTrigger is tapped
