@@ -10,20 +10,26 @@
 </head>
 <body>
     <!-- Camera -->
-    <main id="camera">
-        <!-- Camera sensor -->
-        <!-- <canvas id="camera--sensor"></canvas> -->
-        <!-- <!-- Camera view --> -->
-        <!-- <video id="camera--view" autoplay playsinline></video> -->
-        <!-- <!-- Camera output --> -->
-        <!-- <img src="//:0" alt="" id="camera--output"> -->
-		<input type="file" accept="image/*" capture="camera">
-		
-		
-        <!-- Camera trigger -->
-        <!-- <button id="camera--trigger">Take a picture</button> -->
-    </main>
+   <input type='file' id="imgInp"  accept="image/*" capture="camera" />
+    <img id="blah" src="#" alt="your image" />
     <!-- Reference to your JavaScript file -->
-    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+	<script>
+	function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imgInp").change(function(){
+    readURL(this);
+});
+	</script>
 </body>
 </html>
