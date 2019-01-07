@@ -24,11 +24,14 @@
 		
     </main>
     <!-- Camera -->
-   <input type='file' id="imgInp"  accept="image/*" capture="camera" />
-    <img id="blah" src="#" alt="your image" width="100px" />
+   <input type='file' id="imgInp"  accept="image/*" capture="camera" style="display:none;" />
+    <img id="blah" src="#" alt="your image" width="100px" style="display:none;" />
     <!-- Reference to your JavaScript file -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
 	<script>
+	
+	
+	
 	function readURL(input) {
     if (input.files && input.files[0]){
         var reader = new FileReader();
