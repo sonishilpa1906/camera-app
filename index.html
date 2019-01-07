@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<p>A test</p>
     <!-- Camera -->
    <input type='file' id="imgInp"  accept="image/*" capture="camera" />
     <img id="blah" src="#" alt="your image" width="100px" />
@@ -16,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
 	<script>
 	function readURL(input) {
-    if (input.files && input.files[0]) {
+    if (input.files && input.files[0]){
         var reader = new FileReader();
 
         reader.onload = function (e) {
