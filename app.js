@@ -9,6 +9,7 @@ const cameraView = document.querySelector("#camera--view"),
 function cameraStart() {
 	try
 	{
+		
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
