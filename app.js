@@ -25,7 +25,8 @@ const cameraView = document.querySelector("#camera--view"),
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
-	if(is_touch_device() == "true")
+	
+	if(is_touch_device())
 	{
 		$("#camera").hide();
 		$("#imgInp").show();
