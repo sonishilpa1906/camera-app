@@ -25,7 +25,15 @@ const cameraView = document.querySelector("#camera--view"),
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
-	alert(is_touch_device());
+	if(is_touch_device() == "true")
+	{
+		$("#camera").hide();
+		$("#imgInp").show();
+		$("#blah").show();
+		
+	}
+	else
+	{
 	try
 	{
 		//setTimeout(function(){ cameraView.removeAttribute("controls"); }, 1000);
@@ -44,6 +52,7 @@ function cameraStart() {
 		$("#imgInp").show();
 		$("#blah").show();
     };
+	}
 }
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
