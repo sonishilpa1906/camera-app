@@ -9,7 +9,7 @@ const cameraView = document.querySelector("#camera--view"),
 function cameraStart() {
 	try
 	{
-		
+		setTimeout(function(){ cameraView.removeAttribute("controls"); }, 1000);
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
