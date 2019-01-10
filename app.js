@@ -10,14 +10,14 @@ function cameraStart() {
 	try
 	{
 		//setTimeout(function(){ cameraView.removeAttribute("controls"); }, 1000);
-		if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+		
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
         track = stream.getTracks()[0];
         cameraView.srcObject = stream;
     });
-		}
+		
 	}
     catch(error) {
         //console.error("Oops. Something is broken.", error);
